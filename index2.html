@@ -1,103 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>index2.html</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/main.css" />
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
-</head>
 <body>
-<br>
-
-	<div class="container">
-		<div style="text-align: center;">
-			<div class="textoAzulTitulo"><b>Análise Mundial da Des</b></div>
-			<div class="textoRosaTitulo"><b>igualdade de Gêneros</b></div>
-		</div>
-		
-		<div style="text-align: center;">
-			<div class="textoAzulAutora"><b>por: </b></div>
-			<div class="textoRosaAutora"><b>Katharine Amaral</b></div>
-		</div>
-
-		<br/>
-		
-	  <!-- Seções -->
-	  <ul class="nav nav-pills nav-justified" role="tablist">
-		<li class="nav-item">
-		  <a class="nav-link active" data-toggle="pill" href="#distribuicaoPopulacional"><i class="fas fa-users fa-2x"></i><div class="textoItem">Distribuição Popul.</div></a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" data-toggle="pill" href="#educacao"><i class="fas fa-graduation-cap fa-2x"></i><div class="textoItem">Educação</div></a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" data-toggle="pill" href="#financas"><i class="fas fa-coins fa-2x"></i><div class="textoItem">Finanças</div></a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" data-toggle="pill" href="#saude"><i class="fas fa-heartbeat fa-2x"></i><div class="textoItem">Saúde</div></a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" data-toggle="pill" href="#trabalho"><i class="fas fa-briefcase fa-2x"></i><div class="textoItem">Trabalho</div></a>
-		</li>
-	  </ul>
-
-	  <!-- Conteúdo -->
-	  <div class="tab-content">
-		<!-- DISTRIBUIÇÃO POPULACIONAL -->
-		<div id="distribuicaoPopulacional" class="container tab-pane active"><br>
-		  <h3>Distribuição Populacional</h3>
-		  <p>A SER IMPLEMENTADO</p>
-		</div>
-		
-		
-
-		<!-- EDUCAÇÃO -->	
-		<div id="educacao" class="container tab-pane fade"><br>
-		  <h3>Educação</h3>
-		  <p>A SER IMPLEMENTADO</p>
-		</div>
-		
-		
-		
-		
-		<!-- FINANÇAS -->	
-		<div id="financas" class="container tab-pane fade"><br>
-		  <h3>Finanças</h3>
-		  <p>A SER IMPLEMENTADO</p>
-		</div>
-		
-		
-		
-
-		<!-- SAÚDE -->
-		<div id="saude" class="container tab-pane fade"><br>
-		  <h3>Saúde</h3>
-		  <p>A SER IMPLEMENTADO</p>
-		</div>
-		
-
-
-
-		<!-- TRABALHO -->
-		<div id="trabalho" class="container tab-pane fade"><br>
-		  <h3>Trabalho</h3>
-		  <p>A SER IMPLEMENTADO</p>
-		</div>	
-		
-		
-		
-		
-	  </div>
+    <h2>Barras 1 - Vinculando um vetor a dados</h2>
+    	<div id="chart">
 	</div>
-</body>
-</html>
+    
+    <h2>Barras 2 - Vinculando um vetor de objetos</h2>
+    	<div id="chart2">
+	</div>
+    
+    <h2>Barras 3 - Carregando dados de arquivo</h2>
+    	<div id="chart3">
+	</div>
+
+    <h2>Barras 4 - Ordenando dados</h2>
+    	<div id="chart4">
+	</div>
+
+
+<script type="module">
+
+// Load the Observable runtime and inspector.
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+
+// Your notebook, compiled as an ES module.
+import notebook from "https://api.observablehq.com/@katharineamaral29/introducao-ao-d3-com-observable.js?v=3";
+
+// Load the notebook, observing its cells with a default Inspector
+// that simply renders the value of each cell into the provided DOM node.
+new Runtime().module(notebook, name => {
+  if (name === "barras1") {
+    return new Inspector(document.querySelector("#chart"));
+  }
+
+  else  if (name === "barras2") {
+    return new Inspector(document.querySelector("#chart2"));
+  }
+
+  else  if (name === "barras3") {
+    return new Inspector(document.querySelector("#chart3"));
+  }
+
+  else  if (name === "barras4") {
+    return new Inspector(document.querySelector("#chart4"));
+  }
+});
+
+</script>
