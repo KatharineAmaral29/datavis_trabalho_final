@@ -15,6 +15,10 @@
 	color: #FBF495; //AMARELO	
 }
 
+.tooltip-inner {
+    max-width: 100% !important;
+}
+
 .textoAzulTitulo {
 	color: #6061A6; //AZUL
 	float: left;
