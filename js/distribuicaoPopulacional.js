@@ -15,7 +15,7 @@ $(document).ready(function() {
 	 	    });
 
 	 	// initialize the map on the "map" div with a given center and zoom
-	 	var map = L.map('mapid').setView([19.04469, 72.9258], 12).addLayer(osm);
+	 	var map = L.map('mapid').setView([16.636192, 13.886719], 1.5).addLayer(osm);
 
 	 	// Script for adding marker on map click
 	 	function onMapClick(e) {
