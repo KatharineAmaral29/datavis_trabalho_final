@@ -49,3 +49,7 @@
 	color: #FFFCE7; //AMARELO CLARO
 }
 
+#mapid {
+	height: 500px;
+    width: 100%;
+}
