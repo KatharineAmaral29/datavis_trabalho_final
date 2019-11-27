@@ -3,6 +3,18 @@
 	by Katharine Amaral
 */
 
+.mulher {
+	color: #EB4CA0; //ROSA	
+}
+
+.homem {
+	color: #6061A6; //AZUL	
+}
+
+.semDado {
+	color: #FBF495; //AMARELO	
+}
+
 .textoAzulTitulo {
 	color: #6061A6; //AZUL
 	float: left;
